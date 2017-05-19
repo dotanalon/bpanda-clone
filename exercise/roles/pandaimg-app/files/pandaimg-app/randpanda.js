@@ -7,6 +7,7 @@ var config = require('./config.json');
 var HttpDispatcher = require('httpdispatcher');
 var dispatcher = new HttpDispatcher();
 var images = fs.readdirSync(testFolder);
+var oldrand = 0;
 
 function handleRequest(request, response){
     try {
@@ -27,14 +28,13 @@ dispatcher.onGet("/", function(req, res) {
         if (rand == 0){
            rand++
         } else {
-           ramd--
+           rand--
       }
     }
     var img = fs.readFileSync(testFolder + images[rand]);
     res.writeHead(200, {'Content-Type': 'image/jpg'});
     res.end(img, 'binary');
-    var oldrand = rand;
-    console.log(rand);
+    oldrand = rand;
 });
 
 dispatcher.onError(function(req, res) {
