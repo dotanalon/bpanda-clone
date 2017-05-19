@@ -10,7 +10,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   
   config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "base.yml"
+#    ansible.playbook = "base.yml"
+    ansible.playbook = "exercise/base.yaml"
     ansible.inventory_path = "dev"
     ansible.host_key_checking = false
     ansible.extra_vars = { 'ansible_connection' => 'ssh',

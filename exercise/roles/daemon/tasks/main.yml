@@ -1,6 +1,7 @@
 ---
 - name: Install dependencies
   apt: pkg={{item}} state=installed
+  become: yes
   with_items:
     - daemon
 
