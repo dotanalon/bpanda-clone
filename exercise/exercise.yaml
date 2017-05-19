@@ -1,12 +1,5 @@
 ---
-- name: Common tasks FTW
-  hosts: all
-  become: yes
-  pre_tasks:
-    - name: Set hostname
-      hostname: name={{inventory_hostname}}
-
-- name: Base bamboo service
+- name: Deploy exersice applications
   hosts: applicationservers
   become: yes
   roles:
