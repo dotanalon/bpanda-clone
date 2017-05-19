@@ -1,6 +1,6 @@
 /* load the fs module for access the images*/
 const fs = require('fs');
-const testFolder = './resources/';
+const testFolder = __dirname + '/resources/';
 
 var http = require('http');
 var config = require('./config.json');
