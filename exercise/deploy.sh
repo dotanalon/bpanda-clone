@@ -10,14 +10,14 @@ function print_help () {
 
 case $1 in
     all)
-	$MYANSIBLE getcounter-app
-	$MYANSIBLE pandaimg-app
+	$MYANSIBLE getcounter-app.yaml
+	$MYANSIBLE pandaimg-app.yaml
 	;;
     getcounter-app)
-	$MYANSIBLE getcounter-app
+	$MYANSIBLE getcounter-app.yaml
 	;;
     pandaimg-app)
-	$MYANSIBLE pandaimg-app
+	$MYANSIBLE pandaimg-app.yaml
 	;;
     -h|--help|*)
 	print_help
