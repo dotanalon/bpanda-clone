@@ -1,7 +1,6 @@
 ---
 - name: Deploy exersice applications
   hosts: applicationservers
-  become: yes
   roles:
     - { role: nodejs, tags: nodejs }
     - { role: exercise, tags: exercise }
