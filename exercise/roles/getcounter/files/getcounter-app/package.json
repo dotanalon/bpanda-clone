@@ -1,0 +1,9 @@
+{
+  "name": "getcounter_app",
+  "version": "1.0.0",
+  "description": "I can count GET requests",
+  "main": "getcounter.js",
+  "dependencies": {
+    "httpdispatcher": "^1.0.0"
+  }
+}
