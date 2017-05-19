@@ -1,0 +1,9 @@
+---
+- name: copy getcounter-app app
+  copy: src=getcounter-app dest=/tmp/
+
+- name: npm install
+  npm: path=/tmp/getcounter-app
+
+- name: Start pandaimg-app
+  shell: daemon -- nodejs /tmp/getcounter-app/getcounter.js

@@ -3,4 +3,6 @@
   hosts: applicationservers
   roles:
     - { role: nodejs, tags: nodejs }
-    - { role: exercise, tags: exercise }
+    - { role: daemon, tags: daemon }
+    - { role: getcounter-app, tags: getcounter-app }
+    - { role: pandaimg-app, tags: pandaimg-app }

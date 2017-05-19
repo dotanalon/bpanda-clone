@@ -1,0 +1,9 @@
+---
+- name: copy pandaimg-app app
+  copy: src=pandaimg-app dest=/tmp/
+
+- name: npm install
+  npm: path=/tmp/pandaimg-app
+
+- name: Start pandaimg-app
+  shell: daemon -- nodejs /tmp/pandaimg-app/randpanda.js
